@@ -16,6 +16,9 @@ namespace PROG6221_POE_PART_1
         {
             // Play voice greeting
             PlayVoiceGreeting();
+
+            // Display ASCII image
+            DisplayAsciiImage();
         }
 
         static void PlayVoiceGreeting()
@@ -34,6 +37,25 @@ namespace PROG6221_POE_PART_1
             catch (Exception ex)
             {
                 Console.WriteLine("Error playing the voice greeting: " + ex.Message);
+            }
+        }
+        static void DisplayAsciiImage()
+        {
+            string[] botArt = {
+     "        [------]        ",
+     "        | .  . |        ",
+     "        |  --  |        ",
+     "        [------]        ",
+     "       /  ----  \\      ",
+     "      | |      | |      ",
+     "      | |      | |      ",
+     "      []        []      ",
+     "     /_\\        /_\\    "
+ };
+
+            foreach (string line in botArt)
+            {
+                Console.WriteLine(line);
             }
         }
     }
